@@ -16,9 +16,6 @@ if ($curl_response === false) {
 }
 curl_close($curl);
 $decoded = json_decode($curl_response);
-if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
-    die('error occured: ' . $decoded->response->errormessage);
-}
-echo 'response ok!';
-var_export($decoded->response);
-var_export($curl_response);
+
+var_export($decoded);
+//var_export($curl_response);
