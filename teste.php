@@ -21,3 +21,4 @@ if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') 
 }
 echo 'response ok!';
 var_export($decoded->response);
+var_export($curl_response);
